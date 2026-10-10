@@ -39,17 +39,6 @@ This project implements a complete data lifecycle divided into three mandatory p
 - **Error Handling (Try/Catch):** The KNIME workflow implements error trapping during the database insertion.
 - **Log Generation:** Any failed inserts are caught and exported to a secondary `CSV` log file for auditing purposes.
 
-## 📂 Repository Structure
-
-etl-barcode-inventory/
-├── data/
-│   ├── node-red/      # Auto-generated files (e.g., Node-RED output: dados_api.jsonl)
-│   ├── manual/        # Manually maintained files (e.g., validades.csv)
-│   └── logs/          # KNIME error logs for failed DB inserts (e.g., erros_etl.csv)
-├── knime/             # KNIME workflow project folder
-├── node-red/          # Node-RED flow exports (flows.json backup)
-└── README.md
-
 ## 🛠️ Technologies & Tools
 - **Node-RED:** Event-driven data ingestion and API requests.
 - **KNIME:** Batch processing, data transformation, and cleaning.
