@@ -1,0 +1,160 @@
+[
+    {
+        "id": "696d082b09dc7eac",
+        "type": "tab",
+        "label": "Barcode-Read-Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "30aaca2b8118ccfc",
+        "type": "http request",
+        "z": "696d082b09dc7eac",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://world.openfoodfacts.org/api/v2/product/{{payload}}.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "deec491fc75fcbc9",
+                "9c5df063354a4c2e",
+                "45f7c133421f5062"
+            ]
+        ]
+    },
+    {
+        "id": "deec491fc75fcbc9",
+        "type": "debug",
+        "z": "696d082b09dc7eac",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "70ebb66e15ce3192",
+        "type": "inject",
+        "z": "696d082b09dc7eac",
+        "name": "Inject (Debug)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ean\": \"3017624010701\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "97bb4b8fc3cc3218"
+            ]
+        ]
+    },
+    {
+        "id": "b29e0d7f3387d69c",
+        "type": "http in",
+        "z": "696d082b09dc7eac",
+        "name": "Barcode Read",
+        "url": "/scan",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "97bb4b8fc3cc3218"
+            ]
+        ]
+    },
+    {
+        "id": "9c5df063354a4c2e",
+        "type": "http response",
+        "z": "696d082b09dc7eac",
+        "name": "Scan Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1160,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "97bb4b8fc3cc3218",
+        "type": "function",
+        "z": "696d082b09dc7eac",
+        "name": "JSON to STRING",
+        "func": "let ean;\n\nif(typeof msg.payload === 'object' && msg.payload !== null){\n    ean = msg.payload.ean || msg.payload.barcode;\n} else {\n    ean = msg.payload;\n}\n\nmsg.payload = String(ean).trim();\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "30aaca2b8118ccfc"
+            ]
+        ]
+    },
+    {
+        "id": "285e6b2f1fc23d58",
+        "type": "file",
+        "z": "696d082b09dc7eac",
+        "name": "Products File",
+        "filename": "C:\\Users\\ptnun\\Desktop\\IPCA\\3ANO\\ISI\\FoodConnector\\data\\node-red\\openfoodfacts-file",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1490,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45f7c133421f5062",
+        "type": "json",
+        "z": "696d082b09dc7eac",
+        "name": "Convert to JSON String",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1190,
+        "y": 300,
+        "wires": [
+            [
+                "285e6b2f1fc23d58"
+            ]
+        ]
+    }
+]
