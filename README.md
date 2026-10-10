@@ -41,16 +41,14 @@ This project implements a complete data lifecycle divided into three mandatory p
 
 ## 📂 Repository Structure
 
-\`\`\`text
 etl-barcode-inventory/
 ├── data/
-│   ├── node-red/        # Auto-generated files (e.g., Node-RED output: dados_api.jsonl)
-│   ├── manual/          # Manually maintained files (e.g., validades.csv)
-│   └── logs/            # KNIME error logs for failed DB inserts (e.g., erros_etl.csv)
+│   ├── node-red/      # Auto-generated files (e.g., Node-RED output: dados_api.jsonl)
+│   ├── manual/        # Manually maintained files (e.g., validades.csv)
+│   └── logs/          # KNIME error logs for failed DB inserts (e.g., erros_etl.csv)
 ├── knime/             # KNIME workflow project folder
 ├── node-red/          # Node-RED flow exports (flows.json backup)
 └── README.md
-\`\`\`
 
 ## 🛠️ Technologies & Tools
 - **Node-RED:** Event-driven data ingestion and API requests.
