@@ -40,6 +40,10 @@
     <config key="variables"/>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="Node created an empty data table."/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.constantvalue.ConstantValueColumnNodeFactory2"/>
     <entry key="node-name" type="xstring" value="Constant Value Column Appender"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -59,12 +63,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 1, Cols: 5"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 0, Cols: 5"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="166adb6c-0925-4c9d-b513-dc07c2129c11"/>
+        <entry key="file_store_id" type="xstring" value="574e0e69-c632-4e01-862b-373520cf6e6d"/>
     </config>
 </config>
