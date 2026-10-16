@@ -32,16 +32,17 @@
             </config>
             <config key="manualFilter">
                 <config key="manuallySelected">
-                    <entry key="array-size" type="xint" value="9"/>
-                    <entry key="0" type="xstring" value="ean"/>
-                    <entry key="1" type="xstring" value="product_name_pt"/>
-                    <entry key="2" type="xstring" value="product_name_en"/>
-                    <entry key="3" type="xstring" value="quantity"/>
-                    <entry key="4" type="xstring" value="brand"/>
+                    <entry key="array-size" type="xint" value="10"/>
+                    <entry key="0" type="xstring" value="quantity"/>
+                    <entry key="1" type="xstring" value="brand"/>
+                    <entry key="2" type="xstring" value="product_name_pt"/>
+                    <entry key="3" type="xstring" value="product_name_en"/>
+                    <entry key="4" type="xstring" value="size"/>
                     <entry key="5" type="xstring" value="allergens"/>
                     <entry key="6" type="xstring" value="categories"/>
                     <entry key="7" type="xstring" value="image_front_url"/>
                     <entry key="8" type="xstring" value="product_name"/>
+                    <entry key="9" type="xstring" value="ean"/>
                 </config>
                 <config key="manuallyDeselected">
                     <entry key="array-size" type="xint" value="0"/>
@@ -64,10 +65,10 @@
             <config key="manualFilter">
                 <config key="manuallySelected">
                     <entry key="array-size" type="xint" value="5"/>
-                    <entry key="0" type="xstring" value="expirationdate"/>
-                    <entry key="1" type="xstring" value="quantity"/>
-                    <entry key="2" type="xstring" value="location"/>
-                    <entry key="3" type="xstring" value="donor"/>
+                    <entry key="0" type="xstring" value="location"/>
+                    <entry key="1" type="xstring" value="donor"/>
+                    <entry key="2" type="xstring" value="expirationdate"/>
+                    <entry key="3" type="xstring" value="quantity"/>
                     <entry key="4" type="xstring" value="ean"/>
                 </config>
                 <config key="manuallyDeselected">
@@ -113,14 +114,14 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 3, Cols: 10"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 2, Cols: 10"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 0, Cols: 8"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 1, Cols: 8"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
         </config>
         <config key="port_3">
@@ -133,6 +134,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="b7bd7753-c119-4364-b8cb-fd9c6ebb180e"/>
+        <entry key="file_store_id" type="xstring" value="f2cee8d2-f8ea-42aa-9deb-8296e8c57f25"/>
     </config>
 </config>
