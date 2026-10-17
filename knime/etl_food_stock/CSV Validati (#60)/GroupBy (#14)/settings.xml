@@ -55,7 +55,7 @@
             <config key="columnTypes">
                 <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
-                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                     <entry key="is_null" type="xboolean" value="false"/>
                 </config>
             </config>
@@ -115,6 +115,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="0466351a-bc03-42f3-b6cb-a7e1ba3dca47"/>
+        <entry key="file_store_id" type="xstring" value="2666810f-0184-471e-b146-e9a15bd8afb9"/>
     </config>
 </config>

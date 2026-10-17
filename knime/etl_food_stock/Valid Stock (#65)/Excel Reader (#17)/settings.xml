@@ -12,8 +12,9 @@
                     <entry key="filterMode" type="xstring" value="FILE"/>
                     <config key="path">
                         <entry key="location_present" type="xboolean" value="true"/>
-                        <entry key="file_system_type" type="xstring" value="LOCAL"/>
-                        <entry key="path" type="xstring" value="C:\Users\ptnun\Desktop\IPCA\3ANO\ISI\etl-barcode-inventory\data\products-dictionary\products_dictionary.xlsx"/>
+                        <entry key="file_system_type" type="xstring" value="RELATIVE"/>
+                        <entry key="file_system_specifier" type="xstring" value="knime.workflow.data"/>
+                        <entry key="path" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
                     </config>
                     <entry key="includeSubfolders" type="xboolean" value="false"/>
                     <config key="filters">
@@ -127,11 +128,11 @@
                 </config>
             </config>
         </config>
-        <entry key="sourceId_Internals" type="xstring" value="C:\Users\ptnun\Desktop\IPCA\3ANO\ISI\etl-barcode-inventory\data\products-dictionary\products_dictionary.xlsx"/>
+        <entry key="sourceId_Internals" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
         <config key="transformationParameters">
             <config key="specs">
                 <config key="0">
-                    <entry key="sourceIdentifier" type="xstring" value="C:\Users\ptnun\Desktop\IPCA\3ANO\ISI\etl-barcode-inventory\data\products-dictionary\products_dictionary.xlsx"/>
+                    <entry key="sourceIdentifier" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
                     <config key="spec">
                         <config key="0">
                             <entry key="name" type="xstring" value="rule"/>
@@ -146,8 +147,9 @@
                     </config>
                     <config key="fsLocation">
                         <entry key="location_present" type="xboolean" value="true"/>
-                        <entry key="file_system_type" type="xstring" value="LOCAL"/>
-                        <entry key="path" type="xstring" value="C:\Users\ptnun\Desktop\IPCA\3ANO\ISI\etl-barcode-inventory\data\products-dictionary\products_dictionary.xlsx"/>
+                        <entry key="file_system_type" type="xstring" value="RELATIVE"/>
+                        <entry key="file_system_specifier" type="xstring" value="knime.workflow.data"/>
+                        <entry key="path" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
                     </config>
                 </config>
             </config>
@@ -255,6 +257,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="437e4ca1-d8ee-4d1a-9c0b-fbca9bdddefc"/>
+        <entry key="file_store_id" type="xstring" value="05554ca4-c89f-4f7c-b08f-e4fefa58c8b5"/>
     </config>
 </config>

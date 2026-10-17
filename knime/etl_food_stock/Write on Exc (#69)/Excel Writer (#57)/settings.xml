@@ -10,8 +10,9 @@
         <config key="file_selection">
             <config key="path">
                 <entry key="location_present" type="xboolean" value="true"/>
-                <entry key="file_system_type" type="xstring" value="LOCAL"/>
-                <entry key="path" type="xstring" value="C:\Users\ptnun\Desktop\IPCA\3ANO\ISI\etl-barcode-inventory\data\logs\ean-problems\logs.xlsx"/>
+                <entry key="file_system_type" type="xstring" value="RELATIVE"/>
+                <entry key="file_system_specifier" type="xstring" value="knime.workflow.data"/>
+                <entry key="path" type="xstring" value="pipeline-execution-review/pipeline_execution_review.xlsx"/>
             </config>
             <config key="file_system_chooser__Internals">
                 <entry key="has_fs_port" type="xboolean" value="false"/>
@@ -24,7 +25,7 @@
                 <entry key="custom_url_timeout" type="xint" value="1000"/>
                 <entry key="connected_fs" type="xboolean" value="true"/>
             </config>
-            <entry key="create_missing_folders" type="xboolean" value="false"/>
+            <entry key="create_missing_folders" type="xboolean" value="true"/>
             <entry key="if_path_exists" type="xstring" value="overwrite"/>
         </config>
         <config key="authentication_method">
@@ -35,7 +36,7 @@
         </config>
         <config key="sheet_names">
             <entry key="array-size" type="xint" value="1"/>
-            <entry key="0" type="xstring" value="New Stock"/>
+            <entry key="0" type="xstring" value="New-Stock"/>
         </config>
         <entry key="if_sheet_exists" type="xstring" value="FAIL"/>
         <entry key="write_row_key" type="xboolean" value="false"/>
@@ -66,7 +67,7 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="IDLE"/>
     <entry key="factory" type="xstring" value="org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeFactory"/>
     <entry key="node-name" type="xstring" value="Excel Writer"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME POI (Excel) Plug-in"/>
@@ -83,11 +84,11 @@
         <config key="Sheet Input Ports"/>
     </config>
     <entry key="name" type="xstring" value="Excel Writer"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports"/>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="187bc1f7-032c-4aa3-85fe-3e8d9478c35c"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>

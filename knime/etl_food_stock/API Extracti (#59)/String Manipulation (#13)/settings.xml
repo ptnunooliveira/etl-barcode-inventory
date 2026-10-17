@@ -6,7 +6,7 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="expression" type="xstring" value="regexReplace($size$, &quot;^.*?([0-9]+(?:[.,][0-9]+)*).*$&quot;, &quot;$1&quot;)"/>
+        <entry key="expression" type="xstring" value="regexReplace($size$, &quot;^([0-9]+(?:[.,][0-9+])?)\\s*([A-Za-z]+).*&quot;, &quot;$1$2&quot;)"/>
         <entry key="replaced_column" type="xstring" value="size"/>
         <entry key="append_column" type="xboolean" value="true"/>
         <entry key="test_compilation_on_dialog_close" type="xboolean" value="true"/>
@@ -40,6 +40,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="fa297f1a-68cc-47e9-89b7-70bfa39b7aa1"/>
+        <entry key="file_store_id" type="xstring" value="9f005d48-841a-4306-a840-f224b7ba01f9"/>
     </config>
 </config>

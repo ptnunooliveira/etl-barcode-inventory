@@ -239,15 +239,15 @@
                     <entry key="includeInOutput" type="xboolean" value="true"/>
                     <entry key="columnRename" type="xstring" value="quantity"/>
                     <config key="productionPath">
-                        <entry key="_producer" type="xstring" value="class java.lang.Integer-&gt;java.lang.Integer"/>
-                        <entry key="_converter_name" type="xstring" value="Integer"/>
+                        <entry key="_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+                        <entry key="_converter_name" type="xstring" value="Double"/>
                         <config key="_converter_config"/>
-                        <entry key="_converter_src" type="xstring" value="java.lang.Integer"/>
-                        <entry key="_converter_dst" type="xstring" value="Number (Integer)"/>
-                        <entry key="_producer_src" type="xstring" value="java.lang.Integer"/>
-                        <entry key="_producer_name" type="xstring" value="java.lang.Integer"/>
-                        <entry key="_producer_dst" type="xstring" value="java.lang.Integer"/>
-                        <entry key="_converter" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                        <entry key="_converter_src" type="xstring" value="java.lang.Double"/>
+                        <entry key="_converter_dst" type="xstring" value="Number (Float)"/>
+                        <entry key="_producer_src" type="xstring" value="java.lang.Double"/>
+                        <entry key="_producer_name" type="xstring" value="java.lang.Double"/>
+                        <entry key="_producer_dst" type="xstring" value="java.lang.Double"/>
+                        <entry key="_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
                         <config key="_producer_config"/>
                     </config>
                 </config>
@@ -293,6 +293,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="8d57b5d5-8d48-472d-8b25-107d8c2338b7"/>
+        <entry key="file_store_id" type="xstring" value="78f47094-bce4-44cf-926b-bb65a4c08ebe"/>
     </config>
 </config>

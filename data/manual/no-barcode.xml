@@ -1,0 +1,27 @@
+<fresh_stock>
+
+    <product>
+        <product_name>Maca Riscadinha</product_name>
+        <category>Fruits</category>
+        <quantity>45.5</quantity>
+    </product>
+
+    <product>
+        <product_name>alface frisada</product_name>
+        <category>Vegetables</category>
+        <quantity>30</quantity>
+    </product>
+
+    <product>
+        <product_name>PAO DE MISTURA</product_name>
+        <category>Bakery</category>
+        <quantity>120</quantity>
+    </product>
+
+    <product>
+        <product_name>Banana da Madeira</product_name>
+        <category>Fruits</category>
+        <quantity>60.0</quantity>
+</product>
+
+</fresh_stock>
