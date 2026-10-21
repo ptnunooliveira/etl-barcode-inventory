@@ -12,32 +12,110 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="5"/>
+                <entry key="array-size" type="xint" value="18"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="$product_name$ MATCHES &quot;(?i).*(leite|milk).*&quot;"/>
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;CONGELADOS&quot;"/>
                     </config>
                 </config>
                 <config key="1">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="$product_name$ MATCHES &quot;(?i).*arroz.*&quot;"/>
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;ENLATADOS_CONSERVAS&quot;"/>
                     </config>
                 </config>
                 <config key="2">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="$product_name$ MATCHES &quot;(?i).*massa.*&quot;"/>
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;BEBIDAS&quot;"/>
                     </config>
                 </config>
                 <config key="3">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="$product_name$ MATCHES &quot;(?i).*atum.*&quot;"/>
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;IOGURTES&quot;"/>
                     </config>
                 </config>
                 <config key="4">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;QUEIJOS&quot;"/>
+                    </config>
+                </config>
+                <config key="5">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;LEITE&quot;"/>
+                    </config>
+                </config>
+                <config key="6">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;OUTROS_LATICINIOS&quot;"/>
+                    </config>
+                </config>
+                <config key="7">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;OVOS&quot;"/>
+                    </config>
+                </config>
+                <config key="8">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;CARNE_CHARCUTARIA&quot;"/>
+                    </config>
+                </config>
+                <config key="9">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;PEIXE_MARISCO&quot;"/>
+                    </config>
+                </config>
+                <config key="10">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;PADARIA&quot;"/>
+                    </config>
+                </config>
+                <config key="11">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;MASSAS_ARROZ_CEREAIS&quot;"/>
+                    </config>
+                </config>
+                <config key="12">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;MOLHOS_OLEOS_CONDIMENTOS&quot;"/>
+                    </config>
+                </config>
+                <config key="13">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;DOCES_SNACKS&quot;"/>
+                    </config>
+                </config>
+                <config key="14">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;FRUTA&quot;"/>
+                    </config>
+                </config>
+                <config key="15">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;LEGUMES&quot;"/>
+                    </config>
+                </config>
+                <config key="16">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$ = &quot;OUTROS&quot;"/>
+                    </config>
+                </config>
+                <config key="17">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="TRUE"/>
@@ -58,35 +136,113 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="5"/>
+                <entry key="array-size" type="xint" value="18"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Leite"/>
+                        <entry key="StringCell" type="xstring" value="Congelados"/>
                     </config>
                 </config>
                 <config key="1">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Arroz"/>
+                        <entry key="StringCell" type="xstring" value="Enlatados e conservas"/>
                     </config>
                 </config>
                 <config key="2">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Massa"/>
+                        <entry key="StringCell" type="xstring" value="Bebidas"/>
                     </config>
                 </config>
                 <config key="3">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Atum"/>
+                        <entry key="StringCell" type="xstring" value="Iogurtes"/>
                     </config>
                 </config>
                 <config key="4">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="$product_name$"/>
+                        <entry key="StringCell" type="xstring" value="Queijos"/>
+                    </config>
+                </config>
+                <config key="5">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Leite"/>
+                    </config>
+                </config>
+                <config key="6">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Outros laticínios"/>
+                    </config>
+                </config>
+                <config key="7">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Ovos"/>
+                    </config>
+                </config>
+                <config key="8">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Carne e charcutaria"/>
+                    </config>
+                </config>
+                <config key="9">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Peixe e marisco"/>
+                    </config>
+                </config>
+                <config key="10">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Padaria"/>
+                    </config>
+                </config>
+                <config key="11">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Massas, arroz e cereais"/>
+                    </config>
+                </config>
+                <config key="12">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Molhos, óleos e condimentos"/>
+                    </config>
+                </config>
+                <config key="13">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Doces e snacks"/>
+                    </config>
+                </config>
+                <config key="14">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Fruta"/>
+                    </config>
+                </config>
+                <config key="15">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Legumes"/>
+                    </config>
+                </config>
+                <config key="16">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="Outros"/>
+                    </config>
+                </config>
+                <config key="17">
+                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <config key="org.knime.core.data.def.StringCell">
+                        <entry key="StringCell" type="xstring" value="$categories$"/>
                     </config>
                 </config>
             </config>

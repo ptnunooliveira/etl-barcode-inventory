@@ -44,6 +44,10 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="Node created an empty data table."/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.crossjoin.CrossJoinerNodeFactory"/>
     <entry key="node-name" type="xstring" value="Cross Joiner"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -63,12 +67,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 1, Cols: 4"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 0, Cols: 5"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f1f1ed12-6ce8-45bf-911b-05a00c8b8d5d"/>
+        <entry key="file_store_id" type="xstring" value="67c8c4e3-4420-48b7-a22e-0239e041e8a1"/>
     </config>
 </config>

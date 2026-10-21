@@ -14,7 +14,7 @@
                         <entry key="location_present" type="xboolean" value="true"/>
                         <entry key="file_system_type" type="xstring" value="RELATIVE"/>
                         <entry key="file_system_specifier" type="xstring" value="knime.workflow.data"/>
-                        <entry key="path" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
+                        <entry key="path" type="xstring" value="products-dictionary/categories_dictionary.xlsx"/>
                     </config>
                     <entry key="includeSubfolders" type="xboolean" value="false"/>
                     <config key="filters">
@@ -128,11 +128,11 @@
                 </config>
             </config>
         </config>
-        <entry key="sourceId_Internals" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
+        <entry key="sourceId_Internals" type="xstring" value="products-dictionary/categories_dictionary.xlsx"/>
         <config key="transformationParameters">
             <config key="specs">
                 <config key="0">
-                    <entry key="sourceIdentifier" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
+                    <entry key="sourceIdentifier" type="xstring" value="products-dictionary/categories_dictionary.xlsx"/>
                     <config key="spec">
                         <config key="0">
                             <entry key="name" type="xstring" value="rule"/>
@@ -149,7 +149,7 @@
                         <entry key="location_present" type="xboolean" value="true"/>
                         <entry key="file_system_type" type="xstring" value="RELATIVE"/>
                         <entry key="file_system_specifier" type="xstring" value="knime.workflow.data"/>
-                        <entry key="path" type="xstring" value="products-dictionary/products_dictionary.xlsx"/>
+                        <entry key="path" type="xstring" value="products-dictionary/categories_dictionary.xlsx"/>
                     </config>
                 </config>
             </config>
@@ -251,12 +251,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 5, Cols: 2"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 18, Cols: 2"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="05554ca4-c89f-4f7c-b08f-e4fefa58c8b5"/>
+        <entry key="file_store_id" type="xstring" value="fc6a7395-a829-4d62-96df-264333e647e6"/>
     </config>
 </config>

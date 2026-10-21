@@ -12,17 +12,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="5601049132995"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="8410500028794"/>
                     </config>
                 </config>
             </config>
@@ -62,17 +56,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="Leite Meio-Gordo"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Griego natural"/>
                     </config>
                 </config>
             </config>
@@ -90,17 +78,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="1 l"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="440 g (4 x 110 g)"/>
                     </config>
                 </config>
             </config>
@@ -118,17 +100,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="leite"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="leche"/>
                     </config>
                 </config>
             </config>
@@ -146,17 +122,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="Leites meio gordo, Leites UHT"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="Yogures estilo griego, Yogures naturales"/>
                     </config>
                 </config>
             </config>
@@ -174,17 +144,11 @@
         </config>
         <config key="column_domain">
             <config key="possible_values">
-                <entry key="array-size" type="xint" value="2"/>
+                <entry key="array-size" type="xint" value="1"/>
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
                         <entry key="StringCell" type="xstring" value="https://images.openfoodfacts.org/images/products/560/104/913/2995/front_pt.85.400.jpg"/>
-                    </config>
-                </config>
-                <config key="1">
-                    <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
-                    <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="https://images.openfoodfacts.org/images/products/841/050/002/8794/front_es.35.400.jpg"/>
                     </config>
                 </config>
             </config>

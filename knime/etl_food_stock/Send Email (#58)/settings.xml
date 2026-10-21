@@ -21,17 +21,17 @@
         <entry key="cc" type="xstring" value=""/>
         <entry key="bcc" type="xstring" value=""/>
         <entry key="replyTo" type="xstring" value=""/>
-        <entry key="subject" type="xstring" value="Workflow finished"/>
-        <entry key="text" type="xstring" value="Hello!%%00010New updates here:"/>
+        <entry key="subject" type="xstring" value="[ETL SYSTEM] Execution Report"/>
+        <entry key="text" type="xstring" value="Dear Administrator,%%00010%%00010The extraction, transformation, and load (ETL) pipeline for the food inventory has completed its execution. Data from the various sources (CSV, XML, and API via Node-RED) have been successfully joined, cleansed, and loaded into the PostgreSQL database.%%00010%%00010Execution Summary:%%00010- Final Status: Completed%%00010- Database updated: Yes%%00010- Error report updated: Yes (please check the logs to verify products without an EAN or corrupted files)%%00010%%00010To analyze the updated stock volume, the expiration date alert radar, and the error audit grid, please access the real-time monitoring dashboard in Grafana.%%00010%%00010Best regards,%%00010%%00010Automated Data Integration System%%00010(Please do not reply to this automated email)"/>
         <config key="attachedURLs">
             <entry key="array-size" type="xint" value="1"/>
-            <entry key="0" type="xstring" value="file:/C:%5CUsers%5Cptnun%5CDesktop%5CIPCA%5C3ANO%5CISI%5Cetl-barcode-inventory%5Cdata%5Clogs%5Cean-problems%5Clogs.xlsx"/>
+            <entry key="0" type="xstring" value="knime://knime.workflow/data/pipeline-execution-review/pipeline_execution_review.xlsx"/>
         </config>
         <entry key="smtpConnectionTimeout" type="xint" value="2000"/>
         <entry key="smtpReadTimeout" type="xint" value="30000"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <entry key="factory" type="xstring" value="org.knime.base.node.util.sendmail.SendMailNodeFactory"/>
     <entry key="node-name" type="xstring" value="Send Email"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -44,11 +44,11 @@
     <entry key="node-feature-version" type="xstring" value="5.12.0.v202606261225"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Send Email"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports"/>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="774a21c2-090c-4ff7-b0dc-7624c0e3b501"/>
     </config>
 </config>
