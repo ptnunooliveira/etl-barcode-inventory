@@ -1,0 +1,18 @@
+!SESSION 2026-10-16 19:54:29.191 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_PT
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/ptnun/Desktop/IPCA/3ANO/ISI/etl-barcode-inventory/knime/
+
+!ENTRY org.knime.conda.envinstall 1 0 2026-10-16 19:54:50.251
+!MESSAGE Checking pixi cache directory for knime-python-versions (knime-python-versions-5.12.0-py313_202606041333) package: C:\Users\ptnun\AppData\Local\Programs\KNIME\bundling\.pixi-cache
+
+!ENTRY org.knime.conda.envinstall 1 0 2026-10-16 19:54:50.264
+!MESSAGE Could not determine version for knime-python-versions - cleaning cache to be safe.
+
+!ENTRY org.knime.conda.envinstall 1 0 2026-10-16 19:57:18.755
+!MESSAGE Warming up Python environment at: C:\Users\ptnun\AppData\Local\Programs\KNIME\bundling\org_knime_pythonscripting
+
+!ENTRY org.knime.conda.envinstall 1 0 2026-10-16 19:57:21.514
+!MESSAGE Environment warmup successful.

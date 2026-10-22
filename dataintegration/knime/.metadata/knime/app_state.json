@@ -1,0 +1,22 @@
+{
+  "version" : "5.12.0.v202606180846",
+  "projects" : [ {
+    "name" : "etl_food_stock",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "etl_food_stock"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "etl_food_stock",
+    "timeUsed" : "2026-10-16T11:42:13.1192319+01:00",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "etl_food_stock"
+    }
+  } ]
+}

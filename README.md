@@ -1,51 +1,129 @@
 # etl-barcode-inventory
 
-**Food stock management system integrating barcode scanning and ETL pipelines for data extraction, transformation, and loading.**
+**Food stock management system integrating barcode scanning and an ETL pipeline (Node-RED → KNIME → PostgreSQL → Grafana) for data extraction, transformation and loading.**
+
+🎬 **Demo video:** [ETL-ISI-Stage1.mp4](https://alunosipca-my.sharepoint.com/personal/a31550_alunos_ipca_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fa31550%5Falunos%5Fipca%5Fpt%2FDocuments%2FETL%2DISI%2DStage1%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3789a15b%2D9a9a%2D4f4d%2D8a4c%2D9ff0421fd7d2)
+
+📄 **Report:** [`doc/31550_doc.pdf`](doc/31550_doc.pdf)
 
 ---
 
-## 📌 Project Context & Social Impact
-
-This project is part of a larger system currently being developed for a **social organization dedicated to helping individuals and families in need**. 
-
-The main goal of this module is to optimize food stock management. By automating barcode scanning and enriching the data through an external API (Open Food Facts), the system prevents food waste, tracks expiration dates efficiently, and ensures that the organization can better manage its inventory to serve vulnerable families.
-
-This repository was also developed as the **Practical Assignment I** for the **Information Systems Integration (ISI)** course in the Information Systems Engineering degree at **UPCA** (2026/27).
-
-## 🚀 Objectives
-- Consolidate concepts related to Data Integration.
-- Analyze and implement practical ETL (Extract, Transform, Load) scenarios.
-- Explore middleware technologies (Node-RED) and data processing tools (KNIME).
-- Provide a scalable architecture that bridges physical scanning with database persistence.
-
-## 🏗️ Architecture & ETL Phases
-
-This project implements a complete data lifecycle divided into three mandatory phases:
-
-### Phase 1: Data Extraction & Preparation ("E")
-- **Node-RED Middleware:** Acts as the entry point, listening for incoming barcode scans.
-- **External API Rest:** Fetches detailed product information dynamically from the Open Food Facts API based on the scanned EAN/Barcode.
-- **Local Storage / Raw Data:** The Node-RED flow writes the raw JSON responses into a `.jsonl` file (JSON Lines) as an initial staging area.
-- **Manual Data Source:** A secondary `CSV` file is maintained for expiration dates and batch details, demonstrating the ingestion of multiple, heterogeneous data formats.
-
-### Phase 2: Data Processing & Transformation ("T")
-- **KNIME Analytics Platform:** Serves as the core ETL engine.
-- **Data Merging (Joins):** Uses the barcode as a matching key to join the API's JSON data with the manual CSV data.
-- **Data Cleansing:** Filters out unnecessary fields, handles null values, and normalizes text properties (e.g., product names, brands) using Regular Expressions (Regex).
-- **Data Conversion:** Transforms strings to proper Date&Time formats for the expiration dates.
-
-### Phase 3: Persistence & Loading ("L")
-- **PostgreSQL Database:** The transformed and unified data is loaded into a relational database, making it available for the social entity's main management dashboards.
-- **Error Handling (Try/Catch):** The KNIME workflow implements error trapping during the database insertion.
-- **Log Generation:** Any failed inserts are caught and exported to a secondary `CSV` log file for auditing purposes.
-
-## 🛠️ Technologies & Tools
-- **Node-RED:** Event-driven data ingestion and API requests.
-- **KNIME:** Batch processing, data transformation, and cleaning.
-- **PostgreSQL:** Final persistence layer.
-- **Open Food Facts API:** External REST API for product cataloging.
-
 ## 👨‍💻 Author
-- *Nuno Oliveira - 31550*
-- **Course:** Information Systems Engineering (3rd Year) - UPCA
-- **Course Unit:** Information Systems Integration (ISI)
+
+| | |
+|---|---|
+| **Name** | Nuno Miguel Fernandes Oliveira |
+| **Student number** | 31550 |
+| **Course** | Information Systems Engineering (3rd year) – UPCA |
+| **Course unit** | Information Systems Integration (ISI) – Practical Assignment I, 2026/27 |
+| **Supervisor** | Prof. Luís Ferreira |
+
+---
+
+## 📌 Project context
+
+This project is part of a larger system being developed for a **social organization that helps individuals and families in need**. The goal of this module is to optimize food stock management: barcode readings are enriched through an external REST API (Open Food Facts), normalized, validated and loaded into a relational database, so that expiration dates can be tracked and food waste reduced.
+
+---
+
+## 🏗️ Architecture & ETL phases
+
+| Phase | Tool | What happens |
+|---|---|---|
+| **E – Extract** | Node-RED | Four HTTP endpoints receive barcode readings, call the Open Food Facts API and write intermediate files in **three formats**: CSV (confirmed stock), JSON Lines (API data) and XML (fresh products without barcode). |
+| **T – Transform** | KNIME | Reading and validation (EAN-13), join of API and CSV data by EAN, duplicate removal, regex normalization of categories and product names (Rule Engine → code, dictionary → final name), unit conversion of the `size` field (Python script), missing values, error consolidation and execution metrics. |
+| **L – Load** | KNIME + PostgreSQL | Ordered load (`products` before `inventory`, enforced with flow variables); quantities are summed through a staging table (`temp_inventory`) and `INSERT … ON CONFLICT`; rejected records go to `error_logs` and run metrics to `pipeline_executions`. |
+| **Post-load** | KNIME | Excel report export, deletion of intermediate files and e-mail notification. |
+| **Visualization** | Grafana | Dashboard with expiration dates, stock per category and pipeline execution statistics. |
+
+The whole process is triggered by the `/end-session` endpoint: Node-RED launches KNIME (via an `exec` node) and the workflow runs automatically.
+
+---
+
+## 📁 Submitted files
+
+```
+tp01-31550/
+├── README.md                     ← this file
+├── doc/
+│   └── 31550_doc.pdf             ← final report
+├── dataintegration/
+│   ├── knime/
+│   │   ├── etl_food_stock/       ← KNIME workflow (transformations and jobs)
+│   │   └── data/                 ← input and output files used by the workflow (relative paths)
+│   └── node-red/                 ← Node-RED flows (extraction, endpoints, KNIME trigger)
+├── src/
+│   ├── sql/                      ← database schema / dump and load query
+│   ├── python/                   ← Python script for unit conversion of the size field
+│   ├── postman/                  ← Postman collection used to test the endpoints
+│   └── grafana/                  ← Grafana dashboard export (JSON)
+├── package.json                  ← Node.js dependencies (Node-RED)
+└── package-lock.json
+```
+
+**About `data/input` and `data/output`:** the input and output files are kept in `dataintegration/knime/data/`, next to the workflow, because the KNIME workflow and the Node-RED flows use **relative paths** to that folder. It contains:
+- **Inputs:** the normalization dictionaries (`categories_dictionary.xlsx`, `products_dictionary.xlsx`) and the files written by Node-RED during a session (CSV, JSON Lines, XML);
+- **Outputs:** the Excel execution report.
+
+Intermediate session files are deleted by the workflow at the end of each successful run.
+
+---
+
+## ⚙️ How to run
+
+### Requirements
+- **Node.js** (LTS) and npm
+- **KNIME Analytics Platform** with the Python integration extension
+- **PostgreSQL** (developed with version 18) and, optionally, pgAdmin
+- **Grafana**
+- **Postman**
+
+### 1. Database
+```bash
+createdb -U postgres ISI-Stage1
+psql -U postgres -d ISI-Stage1 -f src/sql/<dump_file>.sql
+```
+
+### 2. KNIME
+1. Open KNIME and switch to the workspace `dataintegration/knime` (*File → Switch Workspace*).
+2. Open the `etl_food_stock` workflow.
+3. Configure the credentials in the **PostgreSQL Connector** and **Send Email** nodes.
+4. Close KNIME **with the workflow open**, so that it is restored when Node-RED launches it.
+
+### 3. Node-RED
+```bash
+npm install
+npx node-red
+```
+Open http://localhost:1880 and, if needed, import the flows from `dataintegration/node-red/`.
+
+In the **KNIME Start up** (`exec`) node, adjust the path to `knime.exe` and to the workspace for the machine where it runs. The command waits ~90 s for KNIME to open and then sends the shortcuts **Shift+F8** (reset) and **Shift+F7** (execute all); the waiting time may need to be increased on slower machines.
+
+### 4. Run a counting session (Postman)
+Import the collection from `src/postman/` and send the requests in this order:
+
+| Request | Purpose |
+|---|---|
+| `POST /scan` – `{"ean": "5601049132995"}` | Looks up the product in the API |
+| `POST /confirm-item` – `ean`, `quantity`, `expiration_date`, `api_data` (response of `/scan`) | Confirms the item (CSV + JSON) |
+| `POST /add-fresh` – `product_name`, `category`, `quantity` | Registers a fresh product (XML) |
+| `POST /end-session` – empty body | Closes the session and launches KNIME |
+
+⚠️ Do not confirm the same product with the same expiration date twice in the same session.
+
+### 5. Grafana
+*Dashboards → New → Import*, upload the JSON from `src/grafana/` and select the PostgreSQL data source.
+
+---
+
+## ⚠️ Known limitations
+- KNIME is launched through its **graphical interface** with simulated keyboard shortcuts, because batch mode returned errors; therefore Node-RED does not receive the result of the execution.
+- Fresh products without an expiration date are stored with the conventional date **2099-12-31**, because `expiration_date` is part of the `inventory` key and cannot be null.
+- The path to `knime.exe` in the `exec` node is machine-specific.
+
+More details in the report (`doc/31550_doc.pdf`).
+
+---
+
+## 🛠️ Technologies
+Node-RED · KNIME Analytics Platform · PostgreSQL · Grafana · Postman · Open Food Facts API · Python · GitHub

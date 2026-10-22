@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <product_name>Pão</product_name>
+    <category>Bakery</category>
+    <quantity>7</quantity>
+  </product>
+  <product>
+    <product_name>Pera</product_name>
+    <category>Fruits</category>
+    <quantity>13</quantity>
+  </product>
+</products>
